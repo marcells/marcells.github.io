@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <script src="scripts/three.js"></script>
+    <script src="scripts/three.TrackballControls.js"></script>
+    <script src="scripts/THREEx.KeyboardState.js"></script>
+    <script src="scripts/ponggers.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            PONGGERS.main.load();
+        };
+    </script>
+
+    <style type="text/css">
+        body {
+            font: 62.5%/1.5  "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body style="overflow: hidden">
+    <div style="float: left; width: 300px">
+        <br>
+        <h1>Ponggers</h1>
+        <p>
+            Little 3D pong game, based on <a href="https://github.com/mrdoob/three.js" target="_blank">Three.js</a>.
+        </p>
+        <p>
+            Drag the table around with your left/right mouse button. Zoom with your mouse wheel.
+        </p>
+        <br>
+        <h3>Actions</h3>
+        <ul>
+            <li><a href="#" onclick="location.reload()">Reset all</a></li>
+            <li><a href="#" onclick="PONGGERS.main.nextCamera()">Change camera</a></li>
+            <li><a href="#" onclick="PONGGERS.main.resetBall()">Reset ball</a></li>
+        </ul>
+
+        <h3>Player One</h3>
+        <ul>
+            <li><a href="#" onclick="PONGGERS.main.setPlayer('human')">Human (Use Q/A keys)</a></li>
+            <li><a href="#" onclick="PONGGERS.main.setPlayer('computer')">Computer</a></li>
+        </ul>
+
+        <h3>Player Two</h3>
+        <ul>
+            <li><a href="#" onclick="PONGGERS.main.setOpponent('human')">Human (Use UP/DOWN keys)</a></li>
+            <li><a href="#" onclick="PONGGERS.main.setOpponent('computer')">Computer</a></li>
+        </ul>
+    </div>
+
+    <div style="float: left" id="game" />
+</body>
+
+</html>
